@@ -13,62 +13,93 @@
   /* font-family: "Lato", sans-serif; */
   /* font-family: "Comfortaa", sans-serif; */
 }
+
 body {
   margin: 0;
   padding: 0;
-  color: #ffffff;
-  transition: background 0.5s ease;
-}
-
-.main-container {
-  height: 100vh;
+  color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background 0.5s ease-in-out;
 }
 
 nav {
   padding: 15px 20px;
-}
-
-.App {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.weather-overview {
-  margin: 20px 0;
-}
-
-.weather-overview h1 {
-  font-size: 2.5em;
-  margin: 5px 0;
-}
-
-.weather-overview p {
-  margin: 5px 0;
-  font-size: 1.2em;
-}
-
-.weather-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
   border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  margin-bottom: 20px;
 }
 
-.weather-details .details {
-  flex: 1;
-  min-width: 300px;
+.card-body {
+  padding: 20px;
 }
 
-.weather-details .details p {
-  margin: 5px 0;
-  font-size: 1em;
+.display-4 {
+  font-size: 2.5rem;
+  color: #000000; /* Black text for better contrast */
 }
 
-.live-time {
-  font-size: 1.5em;
-  margin-top: 10px;
+h3,
+h2,
+p {
+  margin: 10px 0;
+  color: #000000; /* Black text for better contrast */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #28a745;
+  transform: scale(1.05);
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 calc(33% - 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  text-align: center;
+  color: #000000; /* Black text for better contrast */
+  animation: fadeIn 1s ease-in-out;
 }
