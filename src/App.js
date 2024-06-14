@@ -32,7 +32,7 @@ const App = () => {
     clear: "☀️",
     storm: "⛈️",
     snowfall: "❄️",
-    // Add more conditions as needed
+    // Add more conditions as needed, - Will do
   };
 
   const fetchWeather = async (query) => {

@@ -41,10 +41,10 @@ nav {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  backdrop-filter: blur(10px);
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
   margin-bottom: 20px;
